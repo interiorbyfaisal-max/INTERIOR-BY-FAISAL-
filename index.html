@@ -2,41 +2,73 @@
 <html>
 <head>
   <title>Interior by Faisal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <style>
     body {
-      font-family: Arial;
       margin: 0;
+      font-family: Arial, sans-serif;
       background: #f5f5f5;
+    }
+
+    header {
+      background: #1e1e1e;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #ccc;
+    }
+
+    section {
+      padding: 30px 20px;
       text-align: center;
     }
-    header {
-      background: #222;
-      color: white;
-      padding: 20px;
+
+    h2 {
+      margin-bottom: 15px;
+      color: #333;
     }
-    h1 {
-      margin: 0;
-    }
+
     .container {
-      padding: 30px;
+      max-width: 900px;
+      margin: auto;
     }
-    .services {
+
+    .services, .features {
       display: flex;
       flex-direction: column;
       gap: 15px;
     }
+
     .card {
       background: white;
       padding: 15px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
+
     footer {
-      margin-top: 30px;
-      padding: 15px;
-      background: #222;
+      background: #1e1e1e;
       color: white;
+      text-align: center;
+      padding: 20px;
     }
+
+    .contact {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
   </style>
 </head>
 
@@ -44,21 +76,70 @@
 
 <header>
   <h1>Interior by Faisal</h1>
-  <p>Professional Interior Designing Services</p>
+  <p>Transforming Spaces into Beautiful Living Experiences</p>
 </header>
 
-<div class="container">
-  <h2>Our Services</h2>
-
-  <div class="services">
-    <div class="card">Interior Designing</div>
-    <div class="card">False Ceiling</div>
-    <div class="card">Wardrobe Design</div>
+<section>
+  <div class="container">
+    <h2>About Us</h2>
+    <p>
+      We are a professional interior designing service based in Srinagar,
+      specializing in modern and customized interior solutions.
+      We focus on quality, creativity, and customer satisfaction to bring your dream spaces to life.
+    </p>
   </div>
-</div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="card">
+        <b>Interior Designing</b><br>
+        Complete home and office interior planning with modern designs
+      </div>
+      <div class="card">
+        <b>False Ceiling</b><br>
+        Stylish ceiling designs with lighting solutions
+      </div>
+      <div class="card">
+        <b>Wardrobe Design</b><br>
+        Custom wardrobes designed for space and functionality
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Our Work</h2>
+    <p>Modern Bedroom Design | Luxury Living Room | Modular Kitchen</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Why Choose Us</h2>
+    <div class="features">
+      <div class="card">✔ Professional Work</div>
+      <div class="card">✔ Affordable Pricing</div>
+      <div class="card">✔ On-Time Delivery</div>
+      <div class="card">✔ Customized Designs</div>
+      <div class="card">✔ Customer Satisfaction</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container contact">
+    <h2>Contact Us</h2>
+    <p>📞 Phone: 7006550787</p>
+    <p>📍 Location: Srinagar</p>
+  </div>
+</section>
 
 <footer>
-  Contact: 7006550787
+  © 2026 Interior by Faisal | All Rights Reserved
 </footer>
 
 </body>
