@@ -1,34 +1,321 @@
+<div class="hero">
+<div>
+<img src="logo.png" style="height:100px; margin-bottom:20px;">
+<h1>Luxury Interior Design</h1>
+<p>Transforming Spaces Into Premium Living Experiences</p>
+<button class="btn" onclick="scrollTo('booking')">Book Now</button>
+</div>
+</div><img src="logo.png" style="height:55px;"><div class="hero">
+<div>
+<img src="logo.png" style="height:100px; margin-bottom:20px;">
+<h1>Luxury Interior Design</h1>
+<p>Transforming Spaces Into Premium Living Experiences</p>
+<button class="btn" onclick="scrollTo('booking')">Book Now</button>
+</div>
+</div><link rel="icon" href="logo.png">nav img {
+    height: 55px;
+    filter: drop-shadow(0 0 8px gold);
+}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interior by Faisal</title>
-    <style>
-        .navbar {
-            display: flex;
-            align-items: center;
-            background-color: #fff;
-            padding: 10px 20px;
-        }
-        .navbar img {
-            height: 50px;
-            margin-right: 10px;
-        }
-        .navbar h1 {
-            font-weight: bold;
-            color: black;
-            font-family: 'Stylish Font', sans-serif;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Interior by Faisal | Luxury Interiors</title>
+
+<link rel="icon" href="logo.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#0a0a0a;
+color:white;
+scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+position:fixed;
+width:100%;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+nav img{
+height:55px;
+filter:drop-shadow(0 0 8px gold);
+}
+
+nav a{
+color:gold;
+margin:0 10px;
+text-decoration:none;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+background:url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6') center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:55px;
+}
+
+.btn{
+background:gold;
+color:black;
+padding:12px 25px;
+border:none;
+cursor:pointer;
+margin-top:20px;
+border-radius:5px;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+}
+
+/* SECTIONS */
+section{
+padding:80px 40px;
+}
+
+h2{
+text-align:center;
+color:gold;
+margin-bottom:30px;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+/* CARD */
+.card{
+background:rgba(255,255,255,0.05);
+padding:20px;
+border-radius:15px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+/* GALLERY */
+.gallery img{
+width:100%;
+border-radius:10px;
+transition:0.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* FORM */
+form{
+max-width:500px;
+margin:auto;
+}
+
+input,textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:5px;
+}
+
+button{
+width:100%;
+padding:12px;
+background:gold;
+border:none;
+border-radius:5px;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+background:black;
+}
+</style>
 </head>
+
 <body>
-    <nav class="navbar">
-        <img src="file_00000000231471fabca9560d11f40c45.png" alt="Logo">
-        <h1>Interior by Faisal</h1>
-    </nav>
-    <div>
-        <!-- Other content of your website would go here -->
-    </div>
+
+<!-- NAVBAR -->
+<nav>
+<img src="logo.png">
+<div>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+<div>
+<img src="logo.png" style="height:100px;margin-bottom:20px;">
+<h1>Luxury Interior Design</h1>
+<p>Transforming Spaces Into Premium Living Experiences</p>
+<button class="btn" onclick="scrollToSection('booking')">Book Now</button>
+</div>
+</div>
+
+<!-- ABOUT -->
+<section>
+<h2>About Us</h2>
+<p style="text-align:center;max-width:800px;margin:auto;">
+Interior by Faisal delivers premium interior design solutions combining creativity,
+luxury materials, and modern aesthetics to create elegant and modern spaces.
+</p>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+<h2>Our Services</h2>
+<div class="grid">
+
+<div class="card">
+<h3>Under Roof Insulation</h3>
+<p>Advanced insulation solutions improving comfort and energy efficiency.</p>
+</div>
+
+<div class="card">
+<h3>Laminate HDF & SPC Flooring</h3>
+<p>Premium waterproof flooring with modern finishes.</p>
+</div>
+
+<div class="card">
+<h3>Premium Room Designing</h3>
+<p>Luxury customized room concepts with modern aesthetics.</p>
+</div>
+
+<div class="card">
+<h3>Interior Designing</h3>
+<p>Complete interior solutions tailored to your style.</p>
+</div>
+
+</div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+<h2>Portfolio</h2>
+<div class="grid">
+<div class="card">Modern Living Room</div>
+<div class="card">Luxury Bedroom</div>
+<div class="card">Office Interior</div>
+</div>
+</section>
+
+<!-- GALLERY -->
+<section>
+<h2>Gallery</h2>
+<div class="grid gallery">
+<img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6">
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c">
+</div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking">
+<h2>Book a Consultation</h2>
+<form onsubmit="sendBooking(event)">
+<input type="text" id="bname" placeholder="Your Name" required>
+<input type="tel" id="bphone" placeholder="Phone Number" required>
+<input type="date" id="bdate" required>
+<textarea id="bmsg" placeholder="Requirements"></textarea>
+<button type="submit">Book via WhatsApp</button>
+</form>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact Us</h2>
+<form onsubmit="sendMessage(event)">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="email" id="email" placeholder="Your Email" required>
+<textarea id="msg" placeholder="Message"></textarea>
+<button type="submit">Send via WhatsApp</button>
+</form>
+
+<br>
+
+<button class="btn" onclick="callNow()">Call Now</button>
+<button class="btn" onclick="whatsappNow()">WhatsApp</button>
+
+</section>
+
+<!-- MAP -->
+<section>
+<h2>Our Location</h2>
+<iframe src="https://maps.google.com/maps?q=Srinagar&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%" height="300"></iframe>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<p>© 2026 Interior by Faisal | All Rights Reserved</p>
+</footer>
+
+<script>
+function scrollToSection(id){
+document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+
+function whatsappNow(){
+window.open("https://wa.me/917006550787");
+}
+
+function callNow(){
+window.location.href="tel:7006550787";
+}
+
+function sendMessage(e){
+e.preventDefault();
+let name=document.getElementById("name").value;
+let email=document.getElementById("email").value;
+let msg=document.getElementById("msg").value;
+
+window.open(`https://wa.me/917006550787?text=Name:${name}%0AEmail:${email}%0AMessage:${msg}`);
+}
+
+function sendBooking(e){
+e.preventDefault();
+let name=document.getElementById("bname").value;
+let phone=document.getElementById("bphone").value;
+let date=document.getElementById("bdate").value;
+let msg=document.getElementById("bmsg").value;
+
+window.open(`https://wa.me/917006550787?text=Booking Request%0AName:${name}%0APhone:${phone}%0ADate:${date}%0ARequirements:${msg}`);
+}
+</script>
+
 </body>
 </html>
