@@ -2,20 +2,64 @@
 <html>
 <head>
   <title>Interior by Faisal</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 0;
+      background: #f5f5f5;
+      text-align: center;
+    }
+    header {
+      background: #222;
+      color: white;
+      padding: 20px;
+    }
+    h1 {
+      margin: 0;
+    }
+    .container {
+      padding: 30px;
+    }
+    .services {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    footer {
+      margin-top: 30px;
+      padding: 15px;
+      background: #222;
+      color: white;
+    }
+  </style>
 </head>
-<body style="text-align:center; font-family:Arial;">
 
-<h1>Interior by Faisal</h1>
-<p>Professional Interior Designing Services</p>
+<body>
 
-<h2>Our Services</h2>
-<ul>
-  <li>Interior Designing</li>
-  <li>False Ceiling</li>
-  <li>Wardrobe Design</li>
-</ul>
+<header>
+  <h1>Interior by Faisal</h1>
+  <p>Professional Interior Designing Services</p>
+</header>
 
-<p>Contact: 7006550787</p>
+<div class="container">
+  <h2>Our Services</h2>
+
+  <div class="services">
+    <div class="card">Interior Designing</div>
+    <div class="card">False Ceiling</div>
+    <div class="card">Wardrobe Design</div>
+  </div>
+</div>
+
+<footer>
+  Contact: 7006550787
+</footer>
 
 </body>
 </html>
