@@ -1,1 +1,252 @@
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interior by Faisal | Luxury Interiors</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0a0a0a;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    position: fixed;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+}
+
+nav img { height: 45px; }
+
+nav a {
+    color: gold;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 60px;
+    animation: fadeIn 2s ease;
+}
+
+.btn {
+    background: gold;
+    color: black;
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* SECTIONS */
+section {
+    padding: 80px 40px;
+}
+
+h2 {
+    text-align: center;
+    color: gold;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+}
+
+/* CARDS */
+.card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* GALLERY */
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* FORM */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: gold;
+    border: none;
+}
+
+/* MAP */
+iframe {
+    border-radius: 10px;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {opacity:0; transform:translateY(30px);}
+    to {opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<img src="your-logo.png">
+<div>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<div class="hero">
+<div>
+<h1>Luxury Interior Design</h1>
+<p>We Build Premium Living Experiences</p>
+<button class="btn" onclick="scrollToSection('booking')">Book Now</button>
+</div>
+</div>
+
+<section id="services">
+<h2>Our Services</h2>
+<div class="grid">
+<div class="card"><h3>Roof Insulation</h3><p>Advanced insulation for all seasons.</p></div>
+<div class="card"><h3>Laminate & SPC Flooring</h3><p>Waterproof premium flooring.</p></div>
+<div class="card"><h3>Room Designing</h3><p>Luxury customized spaces.</p></div>
+<div class="card"><h3>Interior Designing</h3><p>Complete interior solutions.</p></div>
+</div>
+</section>
+
+<section id="portfolio">
+<h2>Portfolio</h2>
+<div class="grid">
+<div class="card">Modern Living Room</div>
+<div class="card">Luxury Bedroom</div>
+<div class="card">Office Interior</div>
+</div>
+</section>
+
+<section>
+<h2>Gallery</h2>
+<div class="grid gallery">
+<img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6">
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c">
+</div>
+</section>
+
+<section id="booking">
+<h2>Book a Consultation</h2>
+<form onsubmit="sendWhatsAppBooking(event)">
+<input type="text" id="bname" placeholder="Your Name" required>
+<input type="tel" id="bphone" placeholder="Phone Number" required>
+<input type="date" id="bdate" required>
+<textarea id="bmsg" placeholder="Requirements"></textarea>
+<button type="submit">Book via WhatsApp</button>
+</form>
+</section>
+
+<section id="contact">
+<h2>Contact Us</h2>
+<form onsubmit="sendWhatsAppMessage(event)">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="email" id="email" placeholder="Your Email" required>
+<textarea id="message" placeholder="Message"></textarea>
+<button type="submit">Send via WhatsApp</button>
+</form>
+
+<br>
+
+<button class="btn" onclick="callNow()">Call Now</button>
+<button class="btn" onclick="whatsappNow()">WhatsApp</button>
+</section>
+
+<section>
+<h2>Our Location</h2>
+<iframe src="https://maps.google.com/maps?q=Srinagar&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%" height="300"></iframe>
+</section>
+
+<script>
+function scrollToSection(id){
+document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+
+function whatsappNow(){
+window.open("https://wa.me/917006550787");
+}
+
+function callNow(){
+window.location.href="tel:7006550787";
+}
+
+function sendWhatsAppMessage(e){
+e.preventDefault();
+let name=document.getElementById("name").value;
+let email=document.getElementById("email").value;
+let msg=document.getElementById("message").value;
+
+let url=`https://wa.me/917006550787?text=Name:%20${name}%0AEmail:%20${email}%0AMessage:%20${msg}`;
+window.open(url);
+}
+
+function sendWhatsAppBooking(e){
+e.preventDefault();
+let name=document.getElementById("bname").value;
+let phone=document.getElementById("bphone").value;
+let date=document.getElementById("bdate").value;
+let msg=document.getElementById("bmsg").value;
+
+let url=`https://wa.me/917006550787?text=Booking%20Request%0AName:%20${name}%0APhone:%20${phone}%0ADate:%20${date}%0ARequirements:%20${msg}`;
+window.open(url);
+}
+</script>
+
+</body>
+</html>
